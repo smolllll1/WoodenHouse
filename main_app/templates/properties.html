@@ -1,0 +1,43 @@
+<div class="site-section" id="properties-section">
+  <div class="container">
+    <div class="row mb-5 align-items-center">
+      <div class="col-md-7 text-left">
+        <h2 class="section-title mb-3">Найпопулярніше на сьогодні</h2>
+      </div>
+      <div class="col-md-5 text-left text-md-right">
+        <div class="custom-nav1">
+          <a href="#" class="custom-prev1">Попередня</a
+          ><span class="mx-3">/</span
+          ><a href="#" class="custom-next1">Наступна</a>
+        </div>
+      </div>
+    </div>
+    <div class="owl-carousel nonloop-block-13 mb-5">
+      {% for product in products %}
+      <div class="property">
+        <a href="property-single.html">
+          <img src="{{product.photo.url}}" alt="Image" class="img-fluid" />
+        </a>
+        <div class="prop-details p-3">
+          <div><strong class="price">{{ product.title }}</strong></div>
+          <div><strong class="price">{{ product.price }} грн.</strong></div>
+          <div class="mb-2 d-flex justify-content-between">
+            <span class="w">ширина: {{ product.width }},</span>
+            <span class="w">виста: {{ product.height }},</span>
+            <span class="w">довжина: {{ product.length }}</span>
+          </div>
+          <div>
+            {{ product.width }} Х {{ product.height }} Х {{ product.length }},
+            {{product.title }}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <a href="../#contact-section" class="btn btn-primary btn-block">Натисни щоб замовити</a>
+      </div>
+    </div>
+  </div>
+</div>

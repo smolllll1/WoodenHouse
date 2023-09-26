@@ -1,0 +1,7 @@
+.hide{
+  display: none;
+}
+.my_col_a:hover {
+  color: #F69314;
+  font-size: 20px;
+}

@@ -1,0 +1,70 @@
+<section class="site-section bg-light bg-image" id="contact-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <!-- <h3 class="section-sub-title">Get</h3> -->
+        <h2 class="section-title mb-3">Зв'яжіться з нами</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-7 mb-5">
+        <form action="#" class="p-5 bg-white" method="post">
+            {% csrf_token %}
+          <h2 class="font-weight-bold mb-5 text-secondary">Заповніть форму</h2>
+
+          <div class="row form-group">
+            <div class="col-md-12 mb-3 mb-md-0">
+              <label class="text-dark" for="fname">Ім'я</label>
+              {{form_reserve.name }}
+            </div>
+
+          </div>
+
+          <div class="form-group">
+            <label class="text-dark" for="exampleInputEmail1">Email</label>
+            {{ form_reserve.email }}
+          </div>
+
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label class="text-dark" for="subject">Телефон</label>
+              {{ form_reserve.phone }}
+               <small id="phoneHelp" class="form-text text-muted">Формат введення: +380**-***-**-**</small>
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label class="text-dark" for="message">Повідомлення</label>
+              {{ form_reserve.message }}
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col-md-12">
+              <input
+                type="submit"
+                value="Відправити повідомлення"
+                class="btn btn-primary btn-md text-white"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-5">
+        <div class="p-4 mb-3 bg-white">
+          <p class="mb-0 font-weight-bold">Адреса</p>
+          <p class="mb-4">
+            Україна, Володимир-Волинський р-н, м.Володимир
+          </p>
+
+          <p class="mb-0 font-weight-bold">Телефон</p>
+          <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+
+          <p class="mb-0 font-weight-bold">Email Address</p>
+          <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

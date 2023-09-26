@@ -1,0 +1,29 @@
+{
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["--line-length=120"],
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.pylintArgs": [
+    "--load-plugins",
+    "pylint_django",
+    "--django-settings-module=core.settings",
+    "--max-line-length=120"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "python.linting.mypyEnabled": false,
+  "editor.guides.bracketPairs": true,
+  "json.trace.server": "off",
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    "./SmollProdject",
+    "-p",
+    "*test.py"
+  ],
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestEnabled": true
+}

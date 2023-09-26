@@ -1,0 +1,122 @@
+{% extends 'index.html' %} {% block main_content %}
+
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-6 col-xl-1">
+            <h1 class="mb-0 site-logo m-0 p-0"><img src="../static/img/logo2.png" alt="WoodenHouse" width="180"></h1>
+          </div>
+
+          <div class="col-1 col-md-11 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                  {% if user.username %}
+                <a href="{% url 'listings' %}" class="nav-link">Прайс</a>
+                <a href="#properties-section" class="nav-link">Популярне</a>
+                <a href="../#agents-section" class="nav-link">Персонал</a>
+                <a href="../#about-section" class="nav-link">Про компанію</a>
+                <a href="../#contact-section" class="nav-link">Контакти</a>
+                <a class="nav-link" href="{% url 'office' %}">{{ user.username }} </a>
+                {% if 'manager' in user.groups.all.values_list|join:","%}
+                    <a href="{% url 'manager:reservation' %}" class="btn btn-primary text-black nav-link">Менеджер</a>
+                {% endif %}
+                <a href="{% url 'logout' %}" class="btn btn-primary text-black nav-link">Вийти</a>
+                  {% else %}
+                <a href="#properties-section" class="nav-link">Популярне</a>
+                <a href="#agents-section" class="nav-link">Персонал</a>
+                <a href="#about-section" class="nav-link">Про компанію</a>
+                <a href="#news-section" class="nav-link">Новини</a>
+                <a href="#contact-section" class="nav-link">Контакти</a>
+                <a href="{% url 'login' %}" class="btn btn-primary text-black nav-link">Увійти</a>
+                <a href="{% url 'registration' %}" class="btn btn-primary text-black nav-link" type="button">Реєстрація</a>
+                  {% endif %}
+              </ul>
+            {% if 'manager' in user.groups.all.values_list|join:","%}
+                <p class="col-md-12 text-right">Цей користувач належить до групи менеджерів.</p>
+            {% endif %}
+            </nav>
+          </div>
+
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
+
+        </div>
+      </div>
+
+    </header>
+<!-- home-section -->
+{% include 'home_section.html' %}
+<!-- end_home-section -->
+
+<div class="py-5 bg-light site-section how-it-works" id="howitworks-section">
+  <div class="container">
+    <div class="row mb-5 justify-content-center">
+      <div class="col-md-7 text-center">
+        <h2 class="section-title mb-3">Як це працює!</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <div class="pr-5">
+          <span class="custom-icon flaticon-house text-primary"></span>
+          <h3 class="text-dark">Знайди товар який вас цікавить.</h3>
+          <p>Завітай у вкладку "Прайс", та вибери саме те що вам потрібно.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <div class="pr-5">
+          <span class="custom-icon flaticon-coin text-primary"></span>
+          <h3 class="text-dark">Подай заявку.</h3>
+          <p>Залиш свою заявку у розділі "Контакти" і ми з вами зв'яжемось.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <div class="pr-5">
+          <span class="custom-icon flaticon-home text-primary"></span>
+          <h3 class="text-dark">Контакти.</h3>
+          <p>Ви можете зателефонувати нам, наш менеджер надасть вам всю необхідну інформацію.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% comment %}
+<!-- listining_section -->
+{% include 'listining_section.html' %}
+<!-- end_listining_section -->
+{% endcomment %}
+
+<!-- properties-section -->
+{% include 'properties.html' %}
+<!-- end_properties-section -->
+
+<!-- services-section -->
+{#{% include 'services.html' %}#}
+<!-- end_services-section -->
+
+<!-- news-section -->
+{% include 'news.html' %}
+<!-- end_news-section -->
+
+<!-- about-section -->
+{% include 'about.html' %}
+<!-- end_about-section -->
+
+<!-- agents-section -->
+{% include 'agents.html' %}
+<!-- end_agents-section -->
+
+<!-- map-section -->
+{% include 'map_section.html' %}
+<!-- end_map-section -->
+
+<!-- contact-section -->
+{% include 'contact.html' %}
+<!-- end_contact-section -->
+
+{% endblock %}

@@ -1,0 +1,38 @@
+<section class="site-section" id="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="owl-carousel slide-one-item-alt">
+            {% for photo in products %}
+            <img src="{{photo.photo.url}}" alt="Image{{ photo.title }}" class="img-fluid" />
+            {% endfor %}
+        </div>
+        <div class="custom-direction">
+          <a href="#" class="custom-prev">Попередня</a
+          ><a href="#" class="custom-next">Наступна</a>
+        </div>
+      </div>
+      <div class="col-lg-5 ml-auto">
+        <h2 class="section-title mb-3">Про Найкращу Компанію У Своїй Справі</h2>
+        <p class="lead">
+          Наша компанія - це провідний виробник дерев'яних блоків з брусів, а також ми маємо багаторічний досвід в будівництві дерев'яних будинків та бесідок.
+        </p>
+        <p>
+          Ми використовуємо тільки найкращі сировинні матеріали та професійне обладнання, щоб забезпечити високу якість нашої продукції та послуг.
+          Ми прагнемо забезпечити наших клієнтів найкращими рішеннями та індивідуальним підходом до кожного проекту.
+          Наші дерев'яні блоки та будівлі відрізняються високою міцністю та довговічністю, що робить їх ідеальним вибором для будівництва будь-якої споруди з використанням дерева.
+        </p>
+
+        <ul class="list-unstyled ul-check success">
+          <li>Висока якість продукції</li>
+          <li>Індивідуальний підхід до кожного клієнта</li>
+          <li>Екологічність</li>
+          <li>Досвідчені фахівці</li>
+          <li>Надійність</li>
+        </ul>
+
+        <p><a href="#" class="btn btn-primary mr-2 mb-2">Дізнаймя більше</a></p>
+      </div>
+    </div>
+  </div>
+</section>

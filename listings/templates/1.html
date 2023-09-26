@@ -1,0 +1,84 @@
+{% extends 'index.html' %} {% block main_content %}
+<br /><br />
+  <a href="#listings-section" class="smoothscroll arrow-down"
+    ><span class="icon-arrow_downward"></span
+  ></a>
+</div>
+
+<div class="site-section" id="listings-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 order-1 order-md-2">
+        <div class="mb-5">
+          <h3 class="text-black mb-4 h5 font-family-2">Filter</h3>
+          <form action="#">
+          
+            <div class="form-group">
+              <div class="select-wrap">
+                <span class="icon icon-keyboard_arrow_down"></span>
+                <select class="form-control px-3">
+                {% for cutegor in categories %}
+                  <option value="">{{cutegor.title}}</option>
+                {% endfor %}
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="mb-5">
+          <h3 class="text-black mb-4 h5 font-family-2">Filter by Price</h3>
+          <div id="slider-range" class="border-primary"></div>
+          <input
+            type="text"
+            name="text"
+            id="amount"
+            class="form-control border-0 pl-0 bg-white"
+            disabled=""
+          />
+        </div>
+      </div>
+      <div class="col-md-9 order-2 order-md-1">
+
+      {% for cutegor in categories %}
+      {% for list in cutegor %}
+         <div class="property horizontal d-flex ">
+          <div class="mr-3 img-entry">
+            <a href="property-single.html"
+              ><img
+                src="{{list.photo.url}}"
+                alt="Image"
+                class="img-fluid"
+            /></a>
+          </div>
+          <div class="prop-details p-3">
+            <div>
+              <a href="property-single.html"
+                ><strong class="price">{{list.price}}</strong></a
+              >
+            </div>
+            <div class="mb-2 d-flex justify-content-between">
+              <span >{{list.width}} | {{list.height}} | {{list.length}}</span>
+            </div>
+            <div>{{list.disc}}</div>
+          </div>
+        </div>
+      {% endfor %}
+       {% endfor %}
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-9">
+        <div class="custom-pagination text-center">
+          <span>1</span>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <span class="more-page">...</span>
+          <a href="#">7</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% include 'properties.html' %}
+{% endblock %}

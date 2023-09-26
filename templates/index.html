@@ -1,0 +1,123 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stated &mdash; Website by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900|Playfair+Display:400,700,900 " rel="stylesheet">
+    <link rel="stylesheet" href={% static "css/helpers.css"%}>
+    <link rel="stylesheet" href={% static "fonts/icomoon/style.css"%}>
+    <link rel="stylesheet" href={% static "css/bootstrap.min.css"%}>
+    <link rel="stylesheet" href={% static "css/jquery-ui.css"%}>
+    <link rel="stylesheet" href={% static "css/owl.carousel.min.css"%}>
+    <link rel="stylesheet" href={% static "css/owl.theme.default.min.css"%}>
+    <link rel="stylesheet" href={% static "css/owl.theme.default.min.css"%}>
+    <link rel="stylesheet" href={% static "css/jquery.fancybox.min.css"%}>
+    <link rel="stylesheet" href={% static "css/bootstrap-datepicker.css"%}>
+    <link rel="stylesheet" href={% static "fonts/flaticon/font/flaticon.css"%}>
+    <link rel="stylesheet" href={% static "css/aos.css"%}>
+    <link rel="stylesheet" href={% static "css/style.css"%}>
+
+    
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+  
+    {% block main_content %}
+    {% endblock %}
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-5">
+                <h2 class="footer-heading mb-4">Про компанію</h2>
+                <p>Ми пишаємося нашою командою професіоналів, які мають багатий досвід у галузі деревообробки та будівництва.
+                    Наші спеціалісти володіють високим рівнем майстерності та використовують найновіші технології.</p>
+              </div>
+              <div class="col-md-3 ml-auto">
+                <h2 class="footer-heading mb-4">Завітай</h2>
+                <ul class="list-unstyled">
+                  <li><a href="../#about-section">Про компанію</a></li>
+                  <li><a href="../#news-section">Новини</a></li>
+                  <li><a href="../#agents-section">Персонал</a></li>
+                  <li><a href="../#contact-section">Контакти</a></li>
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mb-4">
+              <h2 class="footer-heading mb-4">Підписатись на розсилку</h2>
+            <form action="#" method="post" class="footer-subscribe">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary text-black" type="button" id="button-addon2">Надіслати</button>
+                </div>
+              </div>
+            </form>  
+            </div>
+            
+            <div class="">
+              <h2 class="footer-heading mb-4">Нас можна знайти</h2>
+                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                <a href="https://t.me/Smolllll1_bot" class="pl-3 pr-3"><span class="icon-telegram"></span></a>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+            <p>
+      </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- .site-wrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src={% static "js/my-js.js"%}></script>
+  <script src={% static "js/jquery-3.3.1.min.js"%}></script>
+  <script src={% static "js/jquery-migrate-3.0.1.min.js"%}></script>
+  <script src={% static "js/jquery-ui.js"%}></script>
+  <script src={% static "js/popper.min.js"%}></script>
+  <script src={% static "js/bootstrap.min.js"%}></script>
+  <script src={% static "js/owl.carousel.min.js"%}></script>
+  <script src={% static "js/jquery.stellar.min.js"%}></script>
+  <script src={% static "js/jquery.countdown.min.js"%}></script>
+  <script src={% static "js/bootstrap-datepicker.min.js"%}></script>
+  <script src={% static "js/jquery.easing.1.3.js"%}></script>
+  <script src={% static "js/aos.js"%}></script>
+  <script src={% static "js/jquery.fancybox.min.js"%}></script>
+  <script src={% static "js/jquery.sticky.js"%}></script>
+
+  <script src={% static "js/main.js"%}></script>
+    
+  </body>
+</html>

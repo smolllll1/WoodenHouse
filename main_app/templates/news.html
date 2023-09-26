@@ -1,0 +1,31 @@
+<section class="site-section" id="news-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="section-title mb-3">Новини &amp; Пропозиції &amp; Події</h2>
+      </div>
+    </div>
+
+    <div class="row">
+        {% for new in news %}
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+        <div class="h-entry">
+          <a href="single.html"
+            ><img src="{{ new.photo.url }}" alt="Image{{ new.title }}" class="img-fluid"
+          /></a>
+          <h2 class="font-size-regular text-dark">
+            {{ new.message }}
+          </h2>
+          <div class="meta mb-4">
+            {{ new.title }} <span class="mx-2">&bullet;</span>{{ new.date }}<span
+              class="mx-2"
+              >&bullet;</span
+            >
+            <a href="single.html">News</a>
+          </div>
+        </div>
+      </div>
+        {% endfor %}
+    </div>
+  </div>
+</section>
